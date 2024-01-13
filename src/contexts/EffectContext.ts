@@ -1,4 +1,4 @@
-import React from "react";
+import { createContext } from "react";
 import { Dummy as DummyEffects } from "../hooks";
 
 /**
@@ -6,6 +6,6 @@ import { Dummy as DummyEffects } from "../hooks";
  * whole app. If we handle all effects with this context, we can test the
  * whole app without mocking service worker and DOM objects.
  */
-const EffectContext = React.createContext(DummyEffects);
+const EffectContext = createContext(DummyEffects);
 
 export default EffectContext;

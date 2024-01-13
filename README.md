@@ -5,5 +5,5 @@ context.
 
 # ToDo
 
-- [ ] use `react-testing-library` to test this app with specific effects
+- [x] use `react-testing-library` to test this app with specific effects
 
