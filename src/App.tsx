@@ -1,6 +1,7 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useCallback } from 'react'
 import { EffectContext } from './contexts'
 import { User } from './libs'
+import { useCont } from './hooks'
 
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -10,6 +11,8 @@ function App() {
   const { useUser } = useContext(EffectContext)
   const { user, error, isLoading, login, logout } = useUser()
   const [password, setPassword] = useState('')
+  const sayHello = useCallback((f: (x: string) => void) => { setTimeout(f, 5000, ':D') }, [])
+  const hello = useCont(sayHello, '')
 
   return (
     <>
@@ -44,6 +47,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <p>{hello}</p>
     </>
   )
 }
