@@ -11,8 +11,9 @@ function App() {
   const { useUser } = useContext(EffectContext)
   const { user, error, isLoading, login, logout } = useUser()
   const [password, setPassword] = useState('')
+
   const sayHello = useCallback((f: (x: string) => void) => { setTimeout(f, 5000, ':D') }, [])
-  const hello = useCont(sayHello, '')
+  const [hello] = useCont(sayHello, '')
 
   return (
     <>
