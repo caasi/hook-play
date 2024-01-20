@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-type Cont<T> = (v: T) => void;
+export type Cont<T> = (v: T) => void;
 type WithError<T> = [T, unknown | undefined];
 
 /**
