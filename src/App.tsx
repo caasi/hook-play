@@ -1,7 +1,7 @@
 import { useState, useContext, useCallback } from 'react'
+import { useCont } from '@caasi/use-cont'
 import { EffectContext } from './contexts'
 import { User } from './libs'
-import { useCont } from './hooks'
 
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
